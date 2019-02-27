@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "b0d95b59-d54b-491f-99e3-b048476dd9da",
+		"name": "Blockchain Requests",
+		"description": "Using the blockchain to mine new blocks, and do transaction stuff.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/mine",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/mine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"mine"
+					]
+				},
+				"description": "mine new blocks"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/chain",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/chain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"chain"
+					]
+				},
+				"description": "See the blocks on the blockchain"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/transactions/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sender\": \"91ba3f6b90494c49a00cab6c82aca5c3\",\n\t\"recipient\": \"new-adress\",\n\t\"amount\": 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/transactions/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transactions",
+						"new"
+					]
+				},
+				"description": "add a new transaction"
+			},
+			"response": []
+		}
+	]
+}
